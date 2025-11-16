@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place an Order | Cà Phê Cô Hai</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="media/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/images/favicon-16x16.png">
+  <link rel="icon" href="media/images/favicon.ico">
+  <link rel="manifest" href="media/images/site.webmanifest">
+  <link rel="apple-touch-icon" href="media/images/apple-touch-icon.png">
+</head>
+<body>
+<header>
+  <div class="branding">
+    <img src="media/images/android-chrome-192x192.png"
+         alt="Cà Phê Cô Hai logo"
+         class="header-logo">
+    <div>
+      <h2>Cà Phê Cô Hai</h2>
+      <p>Vietnamese Coffee, One Brilliant Sip at a Time.</p>
+    </div>
+  </div>
+
+  <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="order.html" class="order-button">Place an Order</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page-main">
+  <section class="content narrow">
+    <h1>Place an Order</h1>
+    <p class="lead">
+      Freshly brewed Vietnamese coffee, crafted with care and ready when you are.
+    </p>
+
+    <p>
+      Order online through our secure Square checkout. Choose your drink, pick your time,
+      and we’ll have it ready for pickup.
+    </p>
+
+    <!-- CTA to your Square Online Store -->
+    <div class="order-cta">
+      <!-- TODO: replace # with your actual Square store URL -->
+	  <br>
+		<a href="#" target="_blank" class="primary-btn">
+			Order Now via Square
+		</a>
+
+    </div>
+  </section>
+
+  <!-- Simple menu mockup -->
+  <section class="content menu-grid">
+    <h2>Featured Drinks</h2>
+
+    <div class="menu-items">
+      <article class="menu-card">
+        <h3>Cà Phê Sữa Đá</h3>
+        <p class="menu-tagline">
+          Traditional Vietnamese iced coffee with sweetened condensed milk.
+        </p>
+        <p class="menu-price">$6.00</p>
+      </article>
+
+      <article class="menu-card">
+        <h3>Đen Đá</h3>
+        <p class="menu-tagline">
+          Strong, bold iced black coffee for pure coffee lovers.
+        </p>
+        <p class="menu-price">$5.00</p>
+      </article>
+
+      <article class="menu-card">
+        <h3>Coconut Cream Coffee</h3>
+        <p class="menu-tagline">
+          Rich coconut cream with deep-roasted Vietnamese coffee.
+        </p>
+        <p class="menu-price">$7.00</p>
+      </article>
+
+      <article class="menu-card">
+        <h3>Iced Matcha Coffee Twist</h3>
+        <p class="menu-tagline">
+          Earthy matcha layered with smooth Vietnamese espresso.
+        </p>
+        <p class="menu-price">$7.50</p>
+      </article>
+    </div>
+
+    <p class="note">
+      Prices and availability may vary. Seasonal specials are listed on our Square ordering page.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Coffee Cô Hai, LLC. All Rights Reserved.</p>
+  <div class="social">
+    <a href="#">Facebook</a>
+    <a href="https://www.instagram.com/iamshiannapatron/" target="_blank">Instagram</a>
+    <a href="order.html">Place your order today</a>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+  }
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+      document.body.classList.remove('menu-open');
+    });
+  });
+</script>
+</body>
+</html>
